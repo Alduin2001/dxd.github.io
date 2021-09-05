@@ -1,0 +1,59 @@
+*{
+	margin:0;
+	padding:0;
+	
+}
+header{
+	height:250px;
+	background-color: #e52274;
+}
+header h2{
+	color:#4994bf;
+	font-size: 35px;
+	text-shadow:-2px -2px 3px black;
+	animation: scal 1.5s infinite;
+	padding-top:40px;
+}
+header p{
+font-size: 24px;
+color:#4994bf;
+text-shadow:-2px -2px 3px black;
+}
+header button{
+border:none;
+font-size: 22px;
+padding:10px;
+border-radius: 10px;
+background: #cc29e5;
+transition:.7s;
+color: #EEE;
+cursor:pointer;
+}
+header button:hover{
+background: #cc29e5;	
+background: #a71cbd;
+}
+.content{
+	height:600px;
+	background:linear-gradient(120deg,#29d0e5,#29e5a0);
+}
+@keyframes scal{
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.3);	
+	}
+}
+#rias{
+position: relative;
+display: none;
+}
+#akeno{
+	display: none;
+position: relative;	
+}
+#koneko{
+	display: none;
+position: relative;
+}

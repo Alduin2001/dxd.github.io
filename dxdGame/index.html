@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DxDGame</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<audio src="" id="audio">
+	</audio>
+<header>
+	<center>
+		<h2>Welcome to the DxD</h2>
+		<p>Press a button to play</p>
+		<button onclick="PlayGame()">Play</button>
+	</center>
+</header>
+<section class="content">
+	<img src="media/rias.png" id="rias" width="150" height="150">
+	<img src="media/akeno.png" id="akeno" width="150" height="150">
+	<img src="media/koneko.png" id="koneko" width="150" height="150">
+</section>
+<script>
+	var sound=document.getElementById('audio');
+	var width=document.querySelector('.content').offsetWidth;
+	var height=document.querySelector('.content').offsetHeight;
+	var rias=document.getElementById('rias');
+	var riasX=0;
+	var riasY=0;
+	var akeno=document.getElementById('akeno');
+	var akenoX=0;
+	var akenoY=0;
+	var koneko=document.getElementById('koneko');
+	var konekoX=0;
+	var konekoY=0;
+
+	function PlayGame(){
+		console.log("w-"+width+","+"h-"+height);
+		//Create photos
+		//Create Rias
+		riasX=Math.floor(Math.random()*width/2);
+		riasY=Math.floor(Math.random()*height/2);
+		rias.style.left=riasX+"px";
+		rias.style.top=riasY+"px";
+		rias.style.display="block";
+		//Create Akeno
+		akenoX=Math.floor(Math.random()*width/2);
+		akenoY=Math.floor(Math.random()*height/2);
+		akeno.style.left=akenoX+"px";
+		akeno.style.top=akenoY+"px";
+		akeno.style.display="block";
+		//Create Koneko
+		konekoX=Math.floor(Math.random()*width/2);
+		konekoY=Math.floor(Math.random()*height/2);
+		koneko.style.left=konekoX+"px";
+		koneko.style.top=konekoY+"px";
+		koneko.style.display="block";
+		//Rias click
+		rias.onclick=function(){
+			riasX=Math.floor(Math.random()*width/2);
+		riasY=Math.floor(Math.random()*height/2);
+		rias.style.left=riasX+"px";
+		rias.style.top=riasY+"px";
+		rias.style.display="block";
+		sound.src="media/rias.mp3";
+		sound.play();
+		}
+		//Akeno click
+		akeno.onclick=function(){
+			akenoX=Math.floor(Math.random()*width/2);
+		akenoY=Math.floor(Math.random()*height/2);
+		akeno.style.left=akenoX+"px";
+		akeno.style.top=akenoY+"px";
+		akeno.style.display="block";
+		sound.src="media/akeno.mp3";
+		sound.play();
+		}
+		//Koneko click
+		koneko.onclick=function(){
+			konekoX=Math.floor(Math.random()*width/2);
+		konekoY=Math.floor(Math.random()*height/2);
+		koneko.style.left=konekoX+"px";
+		koneko.style.top=konekoY+"px";
+		koneko.style.display="block";
+		sound.src="media/koneko.mp3";
+		sound.play();
+		}
+	}
+</script>
+</body>
+</html>
